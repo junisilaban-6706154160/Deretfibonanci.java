@@ -17,26 +17,19 @@ public class JavaApplication1 {
      * @param args the command line arguments
      */
 
-	public static void main(String[] args)
-	{
-		Scanner s = new Scanner(System.in);
-		System.out.print("Masukkanpa deret fibonacci ? ");
-		int n = s.nextInt();
-		for(int i=1;i<=n;i++)
-			System.out.print(fibo(i) + " ");
-		System.out.println();
-	}
-
-	private static int fibo(int n)
-	{
-		int f;
-		if(n==1 || n==2)
-			f=1;
-		else
-			f = fibo(n-1) + fibo(n-2);
-		return f;
-	}
+	
+     public static int fibbon(int x){
+        if (x<=0 || x<=1){
+            return x;
+        }
+        else{
+            return fibbon(x-2)+fibbon(x-1);
+        }
+    }
+    public static void main(String[]args){
+        int n=10;
+        for (int i=0;i<n;i++){
+            System.out.print(fibbon(i)+" ");
+        }
+    }
 }
-        // TODO code application logic here
- 
-   
